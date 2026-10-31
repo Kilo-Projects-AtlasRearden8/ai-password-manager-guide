@@ -19,6 +19,7 @@ markdown docs (docs/) and a static HTML site (site/). Topics covered:
 Also includes:
 - LICENSE — MIT License, Copyright (c) 2026 Asdale Dynamics, LLC
 - README.md — project overview with Asdale Dynamics, LLC credit
+- scripts/validate.py — build/test validation script
 - site/assets/css/style.css — clean, print-friendly styles
 - site/assets/js/main.js — print button and checklist persistence
 
@@ -27,27 +28,33 @@ How to run it
 Open site/index.html in any web browser. All pages are static HTML — no
 build step, no server, no dependencies required.
 
-To print the checklist, open site/security-checklist.html and use the
-"Print this checklist" button, or use your browser's print command.
-Print styles hide navigation and show only the checklist content.
+To print the checklist, open site/security-checklist.html and click
+"Print this checklist," or use your browser's print command. Print styles
+hide navigation and show only the checklist content.
+
+To run validation:
+  python3 scripts/validate.py
 
 Verification results
 --------------------
-- All 14 files created and staged in git
-- Git commit created: e675fb2 "Initial commit: AI password manager beginner guide"
+- All 15 files committed across 2 git commits
+- Validation script (scripts/validate.py) PASSED: 0 errors, 0 warnings
+- All 5 HTML files parse cleanly with required elements (header, nav, main, footer)
+- All internal links resolve to existing files
+- All pages contain "Asdale Dynamics, LLC" credit and exact copyright line
 - LICENSE copyright line verified: "Copyright (c) 2026 Asdale Dynamics, LLC"
 - README.md credits Asdale Dynamics, LLC
 - No .github/workflows files present
-- No secrets, API keys, or personal data in any file
-- All HTML pages link correctly to one another and to the CSS/JS assets
+- No secrets, API keys, or personal data patterns found in any file
 - Print CSS confirmed present in style.css and security-checklist.html
 
 Known gaps
 ----------
-- No automated test suite (static site, no build process to test)
-- HTML not validated with a formal validator (visual inspection only)
+- No automated test suite beyond scripts/validate.py (static site, no build process)
+- HTML validated with custom Python parser, not a formal HTML validator
 - No search functionality across pages
 - No dark mode variant
 - Checklist state persists via localStorage only (browser-specific)
+- Checklist spans multiple printed pages (not a single sheet)
 
 Published by Asdale Dynamics, LLC — plain English, step by step, never condescending.
