@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4. Printable Security Checklist | Asdale Dynamics, LLC</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      .print-only { display: block !important; }
+      body { font-size: 11pt; background: #fff; }
+      header, nav, footer { display: none !important; }
+      main { border: none; box-shadow: none; padding: 0; }
+      .checklist-item { break-inside: avoid; margin-bottom: 0.75rem; }
+      h2 { break-after: avoid; page-break-after: avoid; }
+      h3 { break-after: avoid; page-break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="no-print">
+    <h1>Printable Security Checklist</h1>
+    <p>Print this page and check off each item as you complete it. Published by <strong>Asdale Dynamics, LLC</strong></p>
+  </header>
+
+  <nav class="no-print">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="choosing-a-password-manager.html">1. Choosing a Password Manager</a></li>
+      <li><a href="two-factor-authentication.html">2. Two-Factor Authentication</a></li>
+      <li><a href="securing-accounts-with-ai.html">3. Securing Accounts with AI Help</a></li>
+      <li><a href="security-checklist.html">4. Printable Security Checklist</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1 class="print-only">Security Checklist</h1>
+    <p class="print-only">Published by Asdale Dynamics, LLC &mdash; plain English, step by step, never condescending.</p>
+
+    <button id="print-btn" class="no-print" style="padding: 0.75rem 1.5rem; background: #1a1a2e; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; margin-bottom: 1.5rem;">Print this checklist</button>
+
+    <h2>Password Manager Setup</h2>
+    <ul class="checklist-item"><li><input type="checkbox" id="pm-choose"> <label for="pm-choose">Choose a password manager (Bitwarden, 1Password, Apple Keychain, etc.)</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="pm-install"> <label for="pm-install">Install the app on your phone and computer</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="pm-extension"> <label for="pm-extension">Install the browser extension</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="pm-master"> <label for="pm-master">Create a strong master password (passphrase, 4+ random words)</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="pm-write"> <label for="pm-write">Write your master password on paper and store it safely</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="pm-recovery"> <label for="pm-recovery">Save your recovery code / emergency kit (printed, not digital)</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="pm-import"> <label for="pm-import">Import or add your existing logins</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="pm-2fa"> <label for="pm-2fa">Turn on two-factor authentication for your password manager</label></li></ul>
+
+    <h2>Two-Factor Authentication (2FA)</h2>
+    <ul class="checklist-item"><li><input type="checkbox" id="2fa-email"> <label for="2fa-email">Email account (most important &mdash; start here)</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="2fa-bank"> <label for="2fa-bank">Bank and credit card accounts</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="2fa-carrier"> <label for="2fa-carrier">Phone carrier account</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="2fa-pm"> <label for="2fa-pm">Password manager account</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="2fa-social"> <label for="2fa-social">Social media accounts</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="2fa-shopping"> <label for="2fa-shopping">Shopping accounts (Amazon, etc.)</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="2fa-backup"> <label for="2fa-backup">Save backup codes for each account (printed, not digital)</label></li></ul>
+
+    <h2>AI-Assisted Security Review</h2>
+    <ul class="checklist-item"><li><input type="checkbox" id="ai-review"> <label for="ai-review">Pick one account to review with AI help</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="ai-2fa-walkthrough"> <label for="ai-2fa-walkthrough">Ask AI to walk you through 2FA setup for that account</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="ai-phishing"> <label for="ai-phishing">Review any suspicious emails with AI (remove personal info first)</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="ai-passphrase"> <label for="ai-passphrase">Create a strong passphrase with AI inspiration (then customize it)</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="ai-repeat"> <label for="ai-repeat">Repeat for remaining accounts, one at a time</label></li></ul>
+
+    <h2>Ongoing Habits</h2>
+    <ul class="checklist-item"><li><input type="checkbox" id="habit-unique"> <label for="habit-unique">Use unique passwords for every account</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="habit-no-reuse"> <label for="habit-no-reuse">Never reuse passwords across sites</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="habit-breach"> <label for="habit-breach">Check breach alerts from your password manager</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="habit-review"> <label for="habit-review">Review account security every 6 months</label></li></ul>
+    <ul class="checklist-item"><li><input type="checkbox" id="habit-codes"> <label for="habit-codes">Keep backup codes in a safe, accessible place</label></li></ul>
+
+    <h2>Quick Reference</h2>
+    <table>
+      <thead>
+        <tr><th>If you...</th><th>Then...</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Forget your master password</td><td>Use your recovery code</td></tr>
+        <tr><td>Lose your phone</td><td>Use backup codes to log in, then set up 2FA again</td></tr>
+        <tr><td>Suspect a breach</td><td>Change that password immediately, check other accounts</td></tr>
+        <tr><td>Get a suspicious email</td><td>Don't click links. Ask AI or visit the site directly</td></tr>
+      </tbody>
+    </table>
+
+    <p class="print-only"><strong>Remember:</strong> You don't have to do this all at once. One account at a time is fine.</p>
+
+    <footer class="no-print">
+      <p>Published by <strong>Asdale Dynamics, LLC</strong> &mdash; plain English, step by step, never condescending.</p>
+      <p>MIT License. Copyright (c) 2026 Asdale Dynamics, LLC.</p>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
